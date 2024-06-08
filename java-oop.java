@@ -59,11 +59,11 @@ class Cow extends Animal {
   }
 }
 
-class Main {
+public class Main {
   public static void main(String[] args) {
     Cow mycow = new Cow(); // Create a Cow object by invisible default constructor
-    Cow.Sound();
-    Cow.sleep();
+    mycow.Sound();
+    mycow.sleep();
   }
 }
 
