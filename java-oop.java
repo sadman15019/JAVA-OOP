@@ -94,8 +94,8 @@ class Dog extends Animal {
 class Main {
   public static void main(String[] args) {
     Animal myAnimal = new Animal();
-    Animal myPig = new Pig();   //super class instance point to subclass ,can only access all the inherited member variables and methods 
-    Animal myDog = new Dog();   //super class instance point to subclass ,can only access all the inherited member variables and methods 
+    Animal myPig = new Pig();   //super class reference point to subclass instance ,can only access all the inherited member variables and methods 
+    Animal myDog = new Dog();   //super class reference point to subclass instance ,can only access all the inherited member variables and methods 
     Dog d1=new Dog();  
     d1.a=10;    // memeber class variable,not inherited       
     myDog.a=10; // "Gives Error" as myDog is an instance of animal class, cannot access member variables that are not inherited from Animal class
