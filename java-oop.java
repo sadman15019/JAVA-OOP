@@ -98,7 +98,7 @@ class Main {
     Animal myDog = new Dog();   //super class reference point to subclass instance ,can only access all the inherited member variables and methods 
     Dog d1=new Dog();  
     d1.a=10;    // memeber class variable,not inherited       
-    myDog.a=10; // "Gives Error" as myDog is an instance of animal class, cannot access member variables that are not inherited from Animal class
+    myDog.a=10; // "Gives Error" as myDog is an reference of animal class referencing to the instance of a dog class, cannot access member variables that are not inherited from Animal class
     System.out.println(myDog.a);  // "Gives error"
         
     myAnimal.animalSound();  //The animal makes a sound"
