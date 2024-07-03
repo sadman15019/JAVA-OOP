@@ -109,7 +109,8 @@ class Main {
 }
 
 
-Static Method and variables is shared by all instance of a class, thats why it can be accessed without creating an objects
+//Static Method and variables is shared by all instance of a class, thats why it can be accessed without creating an objects
+
 public class Main {
   // Static method
   static void myStaticMethod() {
@@ -129,6 +130,29 @@ public class Main {
     Main myObj = new Main(); // Create an object of Main
     myObj.myPublicMethod(); // Call the public method
   }
+}
+
+
+// Java Program to demonstrate Class Variable
+import java.io.*;
+class GFG {
+    // class variable
+    private static double PI = 3.14159;
+    private static final double PI2 = 3.14159;
+    private double radius;
+    public GFG(){}
+    public GFG(double radius) { this.radius = radius; }
+    public double getArea() { return PI * radius * radius; }
+    public static void main(String[] args)
+    {
+        double a=GFG.PI;
+        GFG o1= new GFG();
+        System.out.println(a);
+        System.out.println(o1.PI);
+        o1.PI=1.1;
+        System.out.println(GFG.PI);
+        o1.PI2=1.2; // gives error cause this is final
+    }
 }
 
 
