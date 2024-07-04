@@ -363,7 +363,8 @@ class A3 extends A2
         System.out.println("Inside the class A3");  
     }  
 }  
-  
+
+//covariant in method overriding
 public class CovariantExample  
 {  
     // main method  
@@ -382,6 +383,37 @@ public class CovariantExample
        a3.foo().print();  
          
     }  
-}  
+} 
+
+
+
+//java exception handling
+import java.util.*;
+class Main{
+    public static void main(String []args)
+    {
+        int myInt;
+        try{
+           myInt= Integer.parseInt("asadsd");  
+           System.out.println(myInt);
+        }
+        catch(NumberFormatException nfe)  // or better use catch (Exception e)
+        {
+            System.out.println("Cannot convert alphabetical string to int");
+        }
+         catch(NullPointerException npe)  // can use multiple catch blocks for one try block
+        {
+            System.out.println("Cannot convert alphabetical string to int");
+        }
+        /*finally block  execute no matter what , either exception occurs or not, this is useful cause when an exception is thrown in try block , rest of the statement are not executed of try block and if we must need some instructions to be executed no matter if there is an exception or not, we can write it inside finally block, instead of try block */
+        finally
+        {
+              System.out.println("This is finally block");
+              System.out.println(myInt);
+        }
+     
+    }
+}
+
 
 
